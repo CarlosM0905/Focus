@@ -1,0 +1,72 @@
+.divTittle{
+    margin-bottom: 25px;
+}
+.smallUser{
+    color: #65E2D9;
+    font-size: 35px;
+}
+.tittle-name{
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 35px;
+}
+.cardItemContainer{
+    height: 331px;
+    width: 236px;
+    margin: 10px 15px;
+    border-radius: 20px;
+    background-color: #303A52;
+    padding: 0px;
+}
+.imgCard{
+    padding: 30px 0;
+    background-color: #B0EDFC;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 10px;
+}
+.tittle-course{
+    font-size: 15px;
+    color: #65E2D9;
+    margin-bottom: 2px;
+}
+.dataCourse{
+    padding: 8px 10px 0 10px;
+}
+.divButton{
+    justify-content: center;
+    margin-top: 25px;
+}
+.buttonContinuar{
+    background-color:#303A52 ;
+    border-radius:38.7483px;
+    border-color:#51C5D6 ;
+    color: #FFFFFF;
+    font-family: SF Pro Display;
+    width: 145px;
+    height: 29px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 21.51px;
+}
+.smallDocenteNombre{
+    margin: 5px 0px;
+    font-size:10px;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+.smallDocenteClase{
+    padding-left: 8px;
+    color: #FFFFFF;
+}
+.smallDocenteFecha{
+    padding-left: 8px;
+    color: #FFFFFF;
+}
+
+.divData{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+

@@ -1,0 +1,40 @@
+<div class="modal fade" id="crearCursoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.5);">
+
+    <div class="modal-dialog" id="modal-dialog">
+        <div class="modal-content" id="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="button-close">
+                    <span style="color: #65E2D9;" aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title d-flex align-items-center justify-content-center" id="title" style="margin-bottom:20px;margin-top:20px">
+                    CREAR CLASE
+                </h5>
+                <form nz-form>
+                    <nz-form-label [nzSpan]="7" nzRequired>Título</nz-form-label>
+                    <nz-form-item>
+                        <input nz-input id="titulo">
+                    </nz-form-item>
+                    <nz-form-label [nzSpan]="7" nzRequired>Descripción</nz-form-label>
+                    <nz-form-item>
+                        <textarea formControlName="comment" nz-input rows="2" placeholder="write any thing"></textarea>
+                    </nz-form-item>
+                    <nz-form-label [nzSpan]="20" nzRequired>¿Deseas adjuntar un enlace?</nz-form-label>
+                    <nz-form-item>
+                        <input nz-input id="titulo">
+                    </nz-form-item>
+                    <P class="text d-flex align-items-center justify-content-start">¿Deseas adjuntar un archivo?</P>
+                    <div class="d-flex flex-row align-items-center justify-content-start pt-2">
+                        <p class="archivo">Subir Archivos</p>
+                        <i class="icon" nz-icon nzType="plus" nzTheme="outline"></i>
+                    </div>
+                    <div class=" d-flex align-items-center justify-content-center">
+                        <button id="listo" class="boton btn btn-primary" nz-button nzType="submit">
+                            Listo
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

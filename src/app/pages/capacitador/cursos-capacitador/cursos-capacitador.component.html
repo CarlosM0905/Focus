@@ -1,0 +1,84 @@
+
+<div class="container-fluid">
+    <div class="row mt-5 mb-2 d-flex flex-row justify-content-between">
+        <div class="col-md-4">
+            <div class="d-flex flex-row align-items-center justify-content-center pt-2">
+                <i class="icon" nz-icon nzType="folder" nzTheme="outline"></i>
+                <p class="title">Cursos</p>
+            </div>
+            <div>
+                <hr class="hr" style="border-color:#5C546A" width="80%">
+            </div>
+            <div class="d-flex align-items-center justify-content-center">
+                <div id="cardb" class="card">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div id="cards" class="card">
+                                <div id="card-curso" class="card-body">
+                                  <p class="curso d-flex align-items-center justify-content-center"> 
+                                    Curso de Herramientas TIC
+                                  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="d-flex flex-row align-items-center justify-content-center pt-2">
+                <i class="icon" nz-icon nzType="folder" nzTheme="outline"></i>
+                <p class="title">Contenido</p>
+            </div>
+            <div>
+                <hr class="hr" style="border-color:#5C546A" width="90%">
+            </div>
+            <div class="row mt-5 mb-2 d-flex flex-row justify-content-between">
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <button nz-button nzType="primary" nzSize="large" nzShape="round" class="btn-p" data-toggle="modal" data-target="#crearCursoModal">
+                        Crear Clase
+                    </button>
+                </div>
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <button nz-button nzType="primary" nzSize="large" nzShape="round" class="btn-p" data-toggle="modal" data-target="#crearTareaModal">
+                        Crear Tarea
+                    </button>
+                </div>
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <button nz-button nzType="primary" nzSize="large" nzShape="round" class="btn-p" data-toggle="modal" data-target="#crearExamenModal">
+                        Crear Exámen
+                    </button>
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-center">
+                <nz-collapse style="margin-top: 30px; width: 90%;">
+                    <nz-collapse nzAccordion>
+                        <nz-collapse-panel *ngFor="let panel of panels" [nzHeader]="paneles" [nzActive]="panel.active">
+                            <ng-template #paneles>
+                                <div class="row">
+                                    <div class="col-md-6 d-flex align-items-center justify-content-start">
+                                        <p class="panel-text">{{ panel.name }} </p>
+                                    </div>
+                                    <div class="col-md-6 d-flex align-items-center justify-content-end">
+                                        <div id="cardp" class="card">
+                                            <div id="card-panel" class="card-body">
+                                              <p class="card-panel-text d-flex align-items-center justify-content-center"> 
+                                                {{ panel.tag }}
+                                              </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                            <p>{{ panel.name }} </p>
+                        </nz-collapse-panel>
+                    </nz-collapse>
+                </nz-collapse>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-crear-curso-modal></app-crear-curso-modal>
+<app-crear-tarea-modal></app-crear-tarea-modal>
+<app-crear-examen-modal></app-crear-examen-modal>

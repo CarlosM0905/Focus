@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row justify-content-between">
+        <div class="col-md-4">
+            <div class="row" style="padding-left: 25px;">
+                <i nz-icon nzType="folder" nzTheme="outline" class="iconClases"></i>
+                <small class="smallCursos">Cursos</small>
+            </div>
+            <h1 class="bottomBorder"></h1>
+        </div>
+        <div class="col-md-4" style="margin-bottom: 10px;">
+            <div class="row" style="padding-left: 25px;">
+                <img src="assets/images/details_24px.svg" >
+                <small class="smallCursos">Detalle de tus calificaciones</small>
+            </div>
+            <h1 class="bottomBorder"></h1>
+        </div>
+    </div>
+
+    <div class="row" style="justify-content: center;">
+        <div class="col-md-4">
+            <div class="card" *ngFor="let curso of cursos">
+                <img src="assets/images/cardimg.svg">
+                <p>{{curso.titulo}}</p>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row align-conten-center" style="padding: 0 13px 0 20px;">
+                <nz-table #nzTable [nzData]="listOfData" nzTableLayout="fixed">
+                    <thead >
+                      <tr>
+                        <th>N°</th>
+                        <th>Tópico</th>
+                        <th>Calificación</th>
+                        <th>Grupo de Notas</th>
+                        <th>Fecha</th>
+                        <th>Ver Detalle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <ng-container *ngFor="let data of nzTable.data">
+                        <tr>
+                          <td>{{ data.id }}</td>
+                          <td>{{ data.topico }}</td>
+                          <td align="center">{{ data.calificacion }}</td>
+                          <td align="center">{{ data.gruponotas }}</td>
+                          <td>{{ data.fecha }}</td>
+                          <td [nzAlign]="'center'" [nzExpand]="expandSet.has(data.id)" (nzExpandChange)="onExpandChange(data.id, $event)"></td>
+                        </tr>
+                        <tr [nzExpand]="expandSet.has(data.id)">
+                          <span>{{ data.description }}</span>
+                        </tr>
+                      </ng-container>
+                    </tbody>
+                  </nz-table>
+            </div>
+        </div>
+    </div>
+</div>
+

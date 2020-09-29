@@ -1,0 +1,71 @@
+.icon{
+    color: #65E2D9;
+    font-size: 25px;
+    margin-right: 7px;
+}
+.title{
+    color: white;
+    font-size: 25px;
+    margin: 0px;
+}
+#cardb{
+    width: 80%;
+    border-radius: 20px;
+    padding: 10px;
+    background-image: url("https://i.imgur.com/NqFhjf5.jpg");
+    background-position-y: center;
+    background-size: 100%;
+}
+
+#cards{
+    width: 90%;
+    border-radius: 15px;
+    background-color: #202A3C;
+}
+
+#cardp{
+    width: 30%;
+    border-radius: 50px;
+    background-color: #E94949;
+}
+
+#card-panel{
+    padding: 0px;
+}
+
+.card-panel-text{
+    font-size: 16px;
+    margin: 0px;
+}
+
+.hr{
+    margin-bottom: 30px;
+}
+
+.curso{
+    margin: 0px;
+    font-size: 18px;
+    color: white;
+}
+
+.card-curso{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.btn-p{
+    background-color: #51C5D6;
+    border-color: transparent;
+    color: white;
+    padding-right: 20%;
+    padding-left: 20%;
+}
+
+.nzAccordion{
+    margin-top: 25px;
+}
+
+.panel-text{
+    margin: 0px;
+    font-size: 18px;
+}

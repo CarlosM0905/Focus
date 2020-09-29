@@ -1,0 +1,45 @@
+.iconClases{
+    font-size: 18px;
+    color: #65E2D9;
+    padding-top: 4px;
+}
+.smallCursos{
+    color: #ffffff;
+    margin-left: 5px;
+    font-size: 19px;
+}
+.bottomBorder{
+    border-bottom: 2px solid #5C546A;
+}
+.containCourse{
+    background-color: #65E2D9;
+    border-radius: 15px;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    background-color: #B0EDFC;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    margin: 20px 0;
+} 
+
+.card > img {
+    position: absolute;
+    top: -8px;
+    left: 38%;
+    width: 80px;
+    height: 80px;
+    z-index: 1;
+}
+
+.card > p{
+    z-index: 10;
+    color: white;
+    background: #202A3C;
+    padding: 4px 32px;
+    margin-top: 16px;
+    border-radius: 8px;
+}

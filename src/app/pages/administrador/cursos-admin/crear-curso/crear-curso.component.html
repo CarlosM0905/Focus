@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-4">
+        <form nz-form nzLayout='vertical'>
+            <nz-form-item>
+                <nz-form-label nzFor="name">Nombre</nz-form-label>
+                <nz-form-control>
+                    <input nz-input name="name" type="text" placeholder="¡Escribe un nombre genial!">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label nzFor="description">Descripcion</nz-form-label>
+                <nz-form-control>
+                    <textarea nz-input name="description" rows="2" placeholder="¿De que va tu curso?"></textarea>
+                </nz-form-control>
+            </nz-form-item>
+        </form>
+    </div>
+    <div class="col-md-3">
+        <div [ngStyle]="{ width: '100%', border: '1px solid #d9d9d9', borderRadius: '4px' }">
+            <nz-calendar [nzFullscreen]="false" (nzSelectChange)="onValueChange($event)" (nzPanelChange)="onPanelChange($event)"></nz-calendar>
+          </div>
+      
+    </div>
+    <div class="col-md-3">
+        <nz-divider [nzText]="selectTeacher">
+            <ng-template #selectTeacher>Capacitador <i nz-icon nzType="rocket"></i></ng-template>
+        </nz-divider>
+        <nz-select ngModel="lucy" nzSize='large' class="select-create-course">
+            <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+            <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+            <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+        </nz-select>
+        <p class="teacher-selected mt-4">Franz Carhuaricra</p>
+    </div>
+    <div class="col-md-2">
+        <button nz-button nzType="primary" nzBlock nzSize="large" nzShape="round" class="btn-create-course">Crear Curso</button>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="row">
+    <i nz-icon nzType="arrow-left" nzTheme="outline" class="back-button" routerLink="/docente"></i>
+    <h4 class="colorAccent">Curso de herramientas TIC</h4>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="tab">Clases:</div>
+      <app-card-course [clase]="clase" [selected]="selected" (onClassClick)="classClicked($event)" [index]="i"
+        *ngFor="let clase of clases; let i = index"></app-card-course>
+    </div>
+    <div class="col-md-8">
+      <nz-tabset nzSelectedIndex="-1">
+        <nz-tab [nzTitle]="contenido">
+          <ng-template #contenido> <i nz-icon nzType="folder-open" nzTheme="twotone"
+              [nzTwotoneColor]="'#65E2D9'"></i>Contenidos</ng-template>
+
+          <div *ngIf="selected==-1; then emptyBlock else contentBlock"></div>
+          <ng-template #contentBlock>
+            <nz-collapse nzAccordion>
+              <nz-collapse-panel nzHeader="Lectura 01" nzActive="true">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fuga quo aliquid nemo est tempora a
+                  cumque pariatur voluptatem quibusdam.</p>
+              </nz-collapse-panel>
+              <nz-collapse-panel nzHeader="Video del tema" nzActive="false">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fuga quo aliquid nemo est tempora a
+                  cumque pariatur voluptatem quibusdam.</p>
+              </nz-collapse-panel>
+              <nz-collapse-panel nzHeader="Palabras de introducción" nzActive="false">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fuga quo aliquid nemo est tempora a
+                  cumque pariatur voluptatem quibusdam.</p>
+              </nz-collapse-panel>
+              <nz-collapse-panel nzHeader="Enlace de encuesta" nzActive="false">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fuga quo aliquid nemo est tempora a
+                  cumque pariatur voluptatem quibusdam.</p>
+              </nz-collapse-panel>
+            </nz-collapse>
+          </ng-template>
+        </nz-tab>
+        <nz-tab [nzTitle]="tareas">
+          <ng-template #tareas> <i nz-icon nzType="edit" nzTheme="twotone" [nzTwotoneColor]="'#65E2D9'"></i>Tareas
+          </ng-template>
+          <div *ngIf="selected==-1; then emptyBlock else taskBlock"></div>
+          <ng-template #taskBlock>
+            <div class="row">
+              <div class="col-md-5">
+                <div class="container_task">
+                  <span>Tarea 1</span>
+                  <i>14</i>
+                </div>
+                <div class="container_task">
+                  <span>Tarea 1</span>
+                  <i>2</i>
+                </div>
+              </div>
+              <div class="col-md-7 info">
+                <p class="colorAccent">Descripción</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, sunt eaque obcaecati nulla facere
+                  molestiae velit reiciendis hic eum inventore consequatur minus commodi omnis dolore odio adipisci
+                  laboriosam excepturi explicabo suscipit impedit libero doloribus ratione, dolor cumque! Nemo ipsam,
+                  reiciendis possimus suscipit soluta molestiae quas maxime veritatis quidem eius quia!</p>
+                <button class="btn-send">Entregar</button>
+                <button class="btn-add"><i nz-icon nzType="upload" nzTheme="outline"></i> Añadir</button>
+
+                <div class="container_file">
+                  <i nz-icon nzType="file" [nzTwotoneColor]="'#65E2D9'" nzTheme="twotone"></i>
+                  <span class="colorWhite">Mi tarea.pdf</span>
+                  <i nz-icon nzType="delete" [nzTwotoneColor]="'#65E2D9'" nzTheme="twotone"></i>
+                </div>
+                <div class="container_file">
+                  <i nz-icon nzType="file" [nzTwotoneColor]="'#65E2D9'" nzTheme="twotone"></i>
+                  <span class="colorWhite">Mi tarea.pdf</span>
+                  <i nz-icon nzType="delete" [nzTwotoneColor]="'#65E2D9'" nzTheme="twotone"></i>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+
+        </nz-tab>
+      </nz-tabset>
+    </div>
+  </div>
+
+</div>
+
+<ng-template #emptyBlock> 
+  <div class="emptyContainer">
+    <img src="assets/svg/empty_class.svg" alt="Empty class">
+    <div class="centerText">
+      <span>Selecciona una </span>
+      <span class="colorAccent">clase</span>
+    </div>
+  </div>
+</ng-template>

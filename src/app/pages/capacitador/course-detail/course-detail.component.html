@@ -1,0 +1,106 @@
+<div class="container">
+  <div class="row d-flex">
+    <i nz-icon nzType="arrow-left" nzTheme="outline" class="back-button mr-2 mb-0 pb-0 mt-1" routerLink="/capacitador/evaluaciones"></i>
+    <h4 class="colorAccent">Atrás</h4>
+  </div>
+
+  <div class="row mt-1">
+
+    <!-- LEFT -->
+    <div class="col-md-5 mt-3">
+      <p class="title-docentes mb-0">Docentes:</p>
+      <h1 class="bottomBorder"></h1>
+      <!-- CARD -->
+      <div  *ngFor="let student of students">
+        <div class="card d-flex justify-content-center align-items-center">
+          <p class="ml-5 name-student">{{student.first_name}} {{student.last_name }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="col-md-7">
+      <nz-tabset nzSelectedIndex="-1">
+
+        <!-- Tareas -->
+        <nz-tab [nzTitle]="tareas">
+          <ng-template #tareas>
+            <i nz-icon nzType="edit" nzTheme="twotone" [nzTwotoneColor]="'#65E2D9'"></i>Tareas
+          </ng-template>
+          <nz-collapse nzAccordion>
+
+            <nz-collapse-panel nzHeader="Tareas 01" nzActive="true" [nzExtra]="extra1">
+              <ng-template #extra1> <nz-badge [nzCount]="14"></nz-badge></ng-template>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fuga quo aliquid nemo est tempora a cumque pariatur voluptatem quibusdam.</p>
+              <p class="primary-color">Enlace:</p>
+              <p>www.youtube.com/9vdiwvs0</p>
+              <p class="primary-color">Archivo:</p>
+              <p>Descargar</p>
+              <button class="btn-calificar" data-toggle="modal" data-target="#modalCalificar">Calificar</button>
+            </nz-collapse-panel>
+            <nz-collapse-panel nzHeader="Tareas 02" nzActive="false" [nzExtra]="extra2">
+              <ng-template #extra2> <nz-badge [nzCount]="10"></nz-badge></ng-template>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fuga quo aliquid nemo est tempora a cumque pariatur voluptatem quibusdam.</p>
+              <p class="primary-color">Enlace:</p>
+              <p>www.youtube.com/9vdiwvs0</p>
+              <p class="primary-color">Archivo:</p>
+              <p>Descargar</p>
+              <button class="btn-calificar" data-toggle="modal" data-target="#modalCalificar">Calificar</button>
+            </nz-collapse-panel>
+            <nz-collapse-panel nzHeader="Tareas 03" nzActive="false" [nzExtra]="extra3">
+              <ng-template #extra3> <nz-badge [nzCount]="17"></nz-badge></ng-template>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fuga quo aliquid nemo est tempora a cumque pariatur voluptatem quibusdam.</p>
+              <p class="primary-color">Enlace:</p>
+              <p>www.youtube.com/9vdiwvs0</p>
+              <p class="primary-color">Archivo:</p>
+              <p>Descargar</p>
+              <button class="btn-calificar" data-toggle="modal" data-target="#modalCalificar">Calificar</button>
+            </nz-collapse-panel>
+          </nz-collapse>
+        </nz-tab>
+
+        <!-- Exámenes -->
+        <nz-tab [nzTitle]="examenes">
+          <ng-template #examenes> <i nz-icon nzType="edit" nzTheme="twotone" [nzTwotoneColor]="'#65E2D9'"></i>Exámenes
+          </ng-template>
+          <nz-collapse nzAccordion>
+            <nz-collapse-panel nzHeader="Exámen Parcial" nzActive="true" [nzExtra]="extra4">
+              <ng-template #extra4> <nz-badge [nzCount]="15"></nz-badge></ng-template>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fuga quo aliquid nemo est tempora a cumque pariatur voluptatem quibusdam.</p>
+              <p class="primary-color">Enlace:</p>
+              <p>www.youtube.com/9vdiwvs0</p>
+              <p class="primary-color">Archivo:</p>
+              <p>Descargar</p>
+              <button class="btn-calificar" data-toggle="modal" data-target="#modalCalificar">Calificar</button>
+            </nz-collapse-panel>
+            <nz-collapse-panel nzHeader="Exámen Final" nzActive="false" [nzExtra]="extra5">
+              <ng-template #extra5> <nz-badge [nzCount]="10"></nz-badge></ng-template>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fuga quo aliquid nemo est tempora a cumque pariatur voluptatem quibusdam.</p>
+              <p class="primary-color">Enlace:</p>
+              <p>www.youtube.com/9vdiwvs0</p>
+              <p class="primary-color">Archivo:</p>
+              <p>Descargar</p>
+              <button class="btn-calificar" data-toggle="modal" data-target="#modalCalificar">Calificar</button>
+            </nz-collapse-panel>
+          </nz-collapse>
+        </nz-tab>
+      </nz-tabset>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalCalificar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog">
+    <div class="modal-content" style="background-color: #202A3C;">
+      <button type="button" class="close text-right mr-3 mt-2" data-dismiss="modal" aria-label="Close"><span style="color: white; font-size: 1.4em;" aria-hidden="true">&times;</span></button>
+      <h5 class="modal-title primary-color text-center mt-4" id="exampleModalLabel">INGRESAR CALIFICACIÓN</h5>
+      <div class="modal-body">
+        <div class="d-flex justify-content-center flex-column align-items-center">
+          <nz-input-number class="mt-4 mb-5" [ngModel]="0" [nzMin]="0" [nzMax]="20" [nzStep]="1" style="width: 45%;"></nz-input-number>
+          <button class="btn-listo">Listo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

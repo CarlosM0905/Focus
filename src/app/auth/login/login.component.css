@@ -1,0 +1,31 @@
+.header-login{
+    height: 10vh;
+}
+
+.link-register{
+    color: white;
+    padding-right: 20px;
+    padding-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.brand-name{
+    color: white;
+    font-size: 24px;
+}
+
+.input-login{
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.105);
+    border: none;
+}
+
+.form-login{
+    height: 80vh;
+}
+
+.btn-login{
+    background: rgb(81,197,214);
+    background: linear-gradient(120deg, rgba(81,197,214,1) 0%, rgba(63,173,206,1) 100%);
+}

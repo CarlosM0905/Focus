@@ -1,0 +1,59 @@
+.back-button {
+    font-size: 20px;
+    color: white;
+}
+.bottomBorder{ border-bottom: 2px solid #5C546A; }
+.title-docentes{
+    color: white;
+    font-size: 1.3em;
+}
+.card{
+    background-image: url(https://i.imgur.com/I4EVwH2.png);
+    height: 60px;
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 15px;
+    background-position: 20% 33%;
+    background-size: 100%;
+}
+.name-student{
+    color: white;
+    background: #202A3C;
+    padding: 4px 32px;
+    margin-top: 16px;
+    border-radius: 8px;
+}
+.primary-color{ color: #65E2D9;}
+.btn-calificar{
+    background-color: #51C5D6;
+    color: white;
+    width: 8em;
+    border-color: transparent;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+}
+.btn-listo{
+    background-color: #51C5D6;
+    color: white;
+    width: 8em;
+    border-color: transparent;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+::ng-deep .ant-tabs-nav {
+    width: 100% !important;
+}
+
+::ng-deep .ant-tabs-tab {
+    flex: 1;
+    text-align: left;
+}
+
+::ng-deep .ant-tabs-nav>div:nth-of-type(1) {
+    display: flex !important;
+    width: 100% !important;
+}

@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row justify-content-center">
+      <div class="col-md-4">
+          <div class="d-flex justify-content-center mb-2">
+            <i nz-icon nzType="folder" nzTheme="outline" class="icon-course"></i>
+            <small class="chose-course ml-3">Elija un curso</small>
+          </div>
+          <h1 class="bottomBorder"></h1>
+      </div>
+  </div>
+
+  <div class="row justify-content-center">
+      <div class="col-md-6" >
+        <div *ngFor="let classroom of classrooms" >
+          <div class="card d-flex justify-content-center align-items-center"
+          routerLink="/capacitador/evaluaciones/course-detail">
+          <p class="title-course">{{ classroom.name }}</p>
+        </div>
+      </div>
+      </div>
+  </div>
+</div>
+

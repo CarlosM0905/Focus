@@ -1,0 +1,58 @@
+<div class="row mt-5 mb-2 d-flex flex-row justify-content-between">
+  <div class="col-md-4">
+    <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+      <input type="text" nz-input placeholder="Buscar un curso" />
+    </nz-input-group>
+    <ng-template #suffixIconButton>
+      <button nz-button nzType="primary" class="search-button" nzSearch><i nz-icon nzType="search"></i></button>
+    </ng-template>
+  </div>
+  <div class="col-md-4 d-flex flex-column align-items-end">
+
+    <button nz-button nzType="primary" nzSize="large" nzShape="round" class="btn-create-course" (click)="open()">Crear
+      Curso</button>
+  </div>
+</div>
+<!-- <div class="row">
+  <div class="col-md-12 d-flex flex-column justify-content-center">
+      <img src="../../../../assets/images/no-courses-admin.svg" alt="No Courses" class="img-fluid">
+      <p class="txt-no-courses">Aún no tienes <span style="color: #65E2D9;">cursos</span>, ¡crea uno!</p>
+  </div>
+</div> -->
+
+<div class="row">
+  <div class="col-md-12">
+    <nz-table #rowSelectionTable nzShowSizeChanger [nzData]="listOfData"
+      (nzCurrentPageDataChange)="onCurrentPageDataChange($event)">
+      <thead>
+        <tr>
+          <th [nzSelections]="listOfSelection" [(nzChecked)]="checked" [nzIndeterminate]="indeterminate"
+            (nzCheckedChange)="onAllChecked($event)"></th>
+          <th>Nombre del Curso</th>
+          <th>Descripción</th>
+          <th>Fecha de Inicio</th>
+          <th>Capacitador</th>
+          <th>Editar</th>
+          <th>Nro de Clases</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of listOfData">
+          <td [nzChecked]="setOfCheckedId.has(data.id)" (nzCheckedChange)="onItemChecked(data.id, $event)"></td>
+          <td>{{ data.name }}</td>
+          <td>{{ data.description }}</td>
+          <td>{{ data.date }}</td>
+          <td>{{ data.trainer }}</td>
+          <td><i  class="edit-icon" (click)="selectCourse(data)" data-toggle="modal" data-target="#modal-docentes" nz-icon nzType="edit" nzTheme="outline" ></i></td>
+          <td>{{ data.totalClasses }}</td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </div>
+</div>
+<nz-drawer [nzClosable]="true" [nzVisible]="visible" [nzHeight]="420" [nzPlacement]="placement" nzTitle="CREAR CURSO"
+  (nzOnClose)="close()">
+  <app-crear-curso></app-crear-curso>
+</nz-drawer>
+
+<app-modal-docentes [courseSelected]="courseSelected"></app-modal-docentes>

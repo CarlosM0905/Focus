@@ -1,0 +1,13 @@
+.edit-icon{
+    color: #65E2D9;
+    font-size: 18px;
+}
+
+.edit-icon:hover{
+    color: #65E2D9;
+    font-size: 24px;
+    transition: font-size 0.3s;
+}
+
+
+

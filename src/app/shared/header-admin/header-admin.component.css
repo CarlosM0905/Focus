@@ -1,0 +1,11 @@
+.link-header{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.row-header{
+    height: 10vh;
+    align-items: center;
+}

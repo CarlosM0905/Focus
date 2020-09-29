@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row divTittle">
+        <div class="col-md-12 tittle-name">
+            <small class="smallUser" *ngFor="let user of usuario">{{user.nombre}}</small>, Bienvenido a tus cursos!
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let docente of docentes">
+            <div class="row cardItemContainer">
+                <div class="col-md-12">
+                    <div class="row imgCard">
+                        <img src="assets/images/cardimg.svg">
+                    </div>
+                    <div class="row dataCourse">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <small class="tittle-course">{{docente.curso}}</small>
+                            </div>
+                            <div class="row">
+                                <small>{{docente.nombre}}</small>
+                            </div>
+                            <div class="row divData">
+                                <i nz-icon nzType="file" nzTheme="outline" style="color: #65E2D9;"></i>
+                                <small class="smallDocenteClase">{{docente.clase}}</small>
+                            </div>
+                            <div class="row divData">
+                                <i nz-icon nzType="calendar" nzTheme="outline" style="color: #65E2D9;"></i>
+                                <small class="smallDocenteFecha">{{docente.fecha}}</small>
+                            </div>
+                            <div class="row divButton d-flex">
+                                <button class="buttonContinuar" routerLink="cursos/id">
+                                    Continuar
+                                </button>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

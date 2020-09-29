@@ -1,0 +1,27 @@
+.icon-course{
+    font-size: 1.6em;
+    color: #65E2D9;
+}
+.chose-course{
+    color: #ffffff;
+    font-size: 1.3em;
+}
+.bottomBorder{
+    border-bottom: 2px solid #5C546A;
+}
+.card{
+    background-image: url(https://i.imgur.com/NqFhjf5.jpg);
+    height: 60px;
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 15px;
+    background-position: 50% 33%;
+    background-size: 88%;
+}
+.title-course{
+    color: white;
+    background: #202A3C;
+    padding: 4px 32px;
+    margin-top: 16px;
+    border-radius: 8px;
+}

@@ -1,0 +1,20 @@
+<div class="card-course" [ngClass]="{'card-selected': selected == index}">
+    <p class="colorAccent">{{index + 1}}. {{clase.titulo}}</p>
+    <div class="card-content">
+        <div class="card-content-information">
+            <i nz-icon nzType="folder-open" nzTheme="twotone" [nzTwotoneColor]="'#65E2D9'"></i>
+            <div class="card-content__subcontent">
+                <span>Contenidos</span>
+                <span class="colorAccent">{{clase.contenido}}</span>
+            </div>
+        </div>
+        <div class="card-content-information"> 
+            <i nz-icon nzType="edit" nzTheme="twotone" [nzTwotoneColor]="'#65E2D9'"></i>
+            <div class="card-content__subcontent">
+                <span>Tareas</span>
+                <span class="colorAccent">{{clase.tareas}}</span>
+            </div>
+        </div>
+    </div>
+    <i nz-icon nzType="arrow-right" nzTheme="outline" class="more-detail" (click)="cardSelected()"></i>
+</div>
